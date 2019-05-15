@@ -91,7 +91,7 @@ boolean Adafruit_MPRLS::begin(uint8_t i2c_addr, TwoWire *twoWire) {
 /**************************************************************************/
 /*! 
     @brief Read and calculate the pressure
-    @returns The measured pressure, in hPa on success, NAN on failure
+    @returns The measured pressure, in PSI on success, NAN on failure
 */
 /**************************************************************************/
 float Adafruit_MPRLS::readPressure(void) {
@@ -106,7 +106,9 @@ float Adafruit_MPRLS::readPressure(void) {
   psi /= (float) (0xE66666 - 0x19999A);
   psi += _PSI_min;
     // convert PSI to hPA
-  return psi * 68.947572932;
+  //return psi * 68.947572932;
+  return psi;
+
 }
 
 
