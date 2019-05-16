@@ -35,7 +35,7 @@
 #endif
 #include "Wire.h"
 
-#include "Adafruit_MPRLS.h"
+#include "MTW_Adafruit_MPRLS.h"
 
 /**************************************************************************/
 /*! 
